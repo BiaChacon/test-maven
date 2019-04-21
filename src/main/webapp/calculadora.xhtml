@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"> 
+
+    <h:head>
+        <title>Calculadora</title>
+    </h:head>
+    <h:body>
+        <h1>Calculadora</h1>
+        <h:form>
+            
+            <h:commandButton value="  " />
+            <h:commandButton value="  " />
+            <h:commandButton value="  " />
+            <h:commandButton value="del" action="#{cal.del()}"/> <br/>
+            
+            <h:commandButton value="1" action="#{cal.num(1)}"/> 
+            <h:commandButton value="2" action="#{cal.num(2)}"/> 
+            <h:commandButton value="3" action="#{cal.num(3)}"/> 
+            
+            <h:commandButton value="  /  " /> <br/>
+            
+            <h:commandButton value="4" action="#{cal.num(4)}"/> 
+            <h:commandButton value="5" action="#{cal.num(5)}"/> 
+            <h:commandButton value="6" action="#{cal.num(6)}"/> 
+            
+            <h:commandButton value="  x " /> <br/>
+            
+            <h:commandButton value="7" action="#{cal.num(7)}"/> 
+            <h:commandButton value="8" action="#{cal.num(8)}"/> 
+            <h:commandButton value="9" action="#{cal.num(9)}"/> 
+            
+            <h:commandButton value="  -  " /> <br/> 
+            
+            <h:commandButton value="  " /> 
+            <h:commandButton value="0" action="#{cal.num(0)}"/> 
+            <h:commandButton value="=" action="#{cal.conta}"/> 
+            
+            <h:commandButton value=" +  " /> <br/>
+            <br/> 
+            <h:outputLabel value="#{cal.conta}"/>
+        </h:form>
+        
+        <h3>Total = <h:outputLabel value="#{cal.total}"/></h3>
+        
+    </h:body>
+</html>
+
