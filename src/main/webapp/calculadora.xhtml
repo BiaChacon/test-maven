@@ -13,36 +13,35 @@
             <h:commandButton value="  " />
             <h:commandButton value="  " />
             <h:commandButton value="  " />
-            <h:commandButton value="del" action="#{cal.del()}"/> <br/>
+            <h:commandButton value="del" action="#{calculadora.del()}"/> <br/>
             
-            <h:commandButton value="1" action="#{cal.num(1)}"/> 
-            <h:commandButton value="2" action="#{cal.num(2)}"/> 
-            <h:commandButton value="3" action="#{cal.num(3)}"/> 
+            <h:commandButton action="#{calculadora.num(1)}" value="1" />
+            <h:commandButton action="#{calculadora.num(2)}" value="2" />
+            <h:commandButton action="#{calculadora.num(3)}" value="3" />
             
-            <h:commandButton value="  /  " /> <br/>
+            <h:commandButton action="#{calculadora.operacao('/')}" value="  /  " /> <br/>
             
-            <h:commandButton value="4" action="#{cal.num(4)}"/> 
-            <h:commandButton value="5" action="#{cal.num(5)}"/> 
-            <h:commandButton value="6" action="#{cal.num(6)}"/> 
+            <h:commandButton action="#{calculadora.num(4)}" value="4" />
+            <h:commandButton action="#{calculadora.num(5)}" value="5" />
+            <h:commandButton action="#{calculadora.num(6)}" value="6" />
             
-            <h:commandButton value="  x " /> <br/>
+            <h:commandButton action="#{calculadora.operacao('*')}" value="  *  " /> <br/>
             
-            <h:commandButton value="7" action="#{cal.num(7)}"/> 
-            <h:commandButton value="8" action="#{cal.num(8)}"/> 
-            <h:commandButton value="9" action="#{cal.num(9)}"/> 
+            <h:commandButton action="#{calculadora.num(7)}" value="7" />
+            <h:commandButton action="#{calculadora.num(8)}" value="8" />
+            <h:commandButton action="#{calculadora.num(9)}" value="9" />
             
-            <h:commandButton value="  -  " /> <br/> 
+            <h:commandButton action="#{calculadora.operacao('-')}" value="  -  " /> <br/> 
             
             <h:commandButton value="  " /> 
-            <h:commandButton value="0" action="#{cal.num(0)}"/> 
-            <h:commandButton value="=" action="#{cal.conta}"/> 
+            <h:commandButton action="#{calculadora.num(0)}" value="0" />
+            <h:commandButton action="#{calculadora.operacao('=')}" value="=" />
             
-            <h:commandButton value=" +  " /> <br/>
-            <br/> 
-            <h:outputLabel value="#{cal.conta}"/>
+            <h:commandButton action="#{calculadora.operacao('+')}" value=" +  " /> <br/>
+            
         </h:form>
         
-        <h3>Total = <h:outputLabel value="#{cal.total}"/></h3>
+        <h3><h:outputLabel value="#{calculadora.conta}" /> </h3>
         
     </h:body>
 </html>
